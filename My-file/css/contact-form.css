@@ -1,0 +1,304 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e0f1e7;
+  font-family: "Karla", sans-serif;
+}
+
+.message-success {
+  position: absolute;
+  left: 50%;
+  top: 1%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background-color: #2a4244;
+  padding: 1% 2%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: #fff;
+  display: none;
+  overflow: hidden;
+  z-index: 999;
+  &.show {
+    display: block;
+    .title,
+    p {
+      opacity: 1;
+    }
+  }
+  .title {
+    display: flex;
+    margin-top: 3%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    img {
+      margin-right: 3%;
+    }
+    h3 {
+    }
+  }
+  p {
+    opacity: 0;
+    font-size: 15px;
+    letter-spacing: 1.2px;
+    margin: 3% 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+}
+
+.contact-container {
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 11%;
+  background-color: #fff;
+  padding: 2%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  h1 {
+    margin-bottom: 2%;
+  }
+  input {
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+  label {
+    display: block;
+    span {
+      margin-left: 1%;
+      color: #007f61;
+    }
+  }
+
+  .name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.5%;
+    .first {
+      flex: 1;
+      position: relative;
+    }
+    .last {
+      flex: 1;
+    }
+    label {
+      margin-bottom: 2%;
+    }
+    input {
+      width: 95%;
+      border: 2px solid #ddd;
+      padding: 3% 2%;
+      padding-left: 4%;
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+      font-size: 20px;
+    }
+  }
+  .email {
+    margin-bottom: 3.5%;
+    label {
+      margin-bottom: 1%;
+    }
+    input {
+      width: 97.5%;
+      border: 2px solid #ddd;
+      padding: 1.5%;
+      font-size: 20px;
+      border-radius: 6px;
+    }
+  }
+  .query-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 3.5%;
+    .title {
+      width: 100%;
+      margin-bottom: 2%;
+      span {
+        margin-left: 1%;
+        color: #007f61;
+      }
+    }
+    .general,
+    .support {
+      flex: 1;
+      div {
+        width: 95%;
+        border: 2px solid #ddd;
+        padding: 3%;
+        padding-left: 5%;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+        input {
+          display: none;
+        }
+
+        label {
+          position: relative;
+          padding-left: 10%;
+          display: flex;
+          align-items: center;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border: 2px solid #ddd;
+          }
+        }
+        &.clicked {
+          border-color: #007f61;
+          background-color: #e0f1e7;
+          label {
+            &::before {
+              border-color: #007f61;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              width: 11px;
+              height: 11px;
+              left: 3.6px;
+              border-radius: 50%;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              -ms-border-radius: 50%;
+              -o-border-radius: 50%;
+              background-color: #007f61;
+            }
+          }
+        }
+      }
+    }
+  }
+  .message {
+    margin-bottom: 3.5%;
+    label {
+      margin-bottom: 1%;
+    }
+    div {
+      width: 100%;
+      textarea {
+        resize: none;
+        width: 97.5%;
+        border: 2px solid #ddd;
+        padding: 2%;
+        font-size: 18px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .policy {
+    margin-bottom: 3.5%;
+    div {
+      width: 100%;
+      input {
+        display: none;
+      }
+      label {
+        display: inline;
+        position: relative;
+        padding-left: 5%;
+        display: flex;
+        align-items: center;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          left: 0;
+          background-color: #fff;
+          border: 2px solid #ddd;
+        }
+      }
+      &.clicked {
+        label {
+          &::before {
+            background-color: #007f61;
+          }
+          &::after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f00c";
+            color: #fff;
+            position: absolute;
+            font-size: 12px;
+            left: 3px;
+          }
+        }
+      }
+    }
+  }
+  .submit {
+    border: none;
+    background-color: #007f61;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    padding: 1.5% 2%;
+    font-size: 20px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    &:hover {
+      background-color: #013e30;
+    }
+  }
+}

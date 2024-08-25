@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/contact-form.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Font Awesome Example</title>
+  </head>
+  <body>
+    <div class="message-success">
+      <div class="title">
+        <img src="../assets/images/icon-success-check.svg" alt="" />
+        <h3>Message Sent!</h3>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <form action="">
+        <div class="name">
+          <div class="first">
+            <label for="first-name">First Name <span>*</span></label>
+            <input type="text" id="first-name" />
+          </div>
+          <div class="last">
+            <label for="last-name">Last Name <span>*</span></label>
+            <input type="text" id="last-name" />
+          </div>
+        </div>
+        <div class="email">
+          <label for="email">Email Address <span>*</span></label>
+          <input type="email" id="email" />
+        </div>
+        <div class="query-type">
+          <p class="title">Query Type <span>*</span></p>
+          <div class="general">
+            <div>
+              <input type="radio" id="general" name="type" />
+              <label for="general">General Enquiry</label>
+            </div>
+          </div>
+          <div class="support">
+            <div>
+              <input type="radio" id="support" name="type" />
+              <label for="support">Support Requset</label>
+            </div>
+          </div>
+        </div>
+        <div class="message">
+          <label for="msg">Message <span>*</span></label>
+          <div><textarea name="" id="msg"></textarea></div>
+        </div>
+        <div class="policy">
+          <div>
+            <input type="checkbox" id="accept" />
+            <label for="accept"
+              >I hereby consent to being contacted by the team <span>*</span>
+            </label>
+          </div>
+        </div>
+        <button class="submit">Submit</button>
+      </form>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
