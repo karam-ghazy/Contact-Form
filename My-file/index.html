@@ -45,13 +45,13 @@
         <div class="query-type">
           <p class="title">Query Type <span>*</span></p>
           <div class="general">
-            <div>
+            <div class="input">
               <input type="radio" id="general" name="type" />
               <label for="general">General Enquiry</label>
             </div>
           </div>
           <div class="support">
-            <div>
+            <div class="input">
               <input type="radio" id="support" name="type" />
               <label for="support">Support Requset</label>
             </div>
@@ -62,14 +62,14 @@
           <div><textarea name="" id="msg"></textarea></div>
         </div>
         <div class="policy">
-          <div>
+          <div class="input">
             <input type="checkbox" id="accept" />
             <label for="accept"
-              >I hereby consent to being contacted by the team <span>*</span>
+              >I consent to being contacted by the team <span>*</span>
             </label>
           </div>
         </div>
-        <button class="submit">Submit</button>
+        <input type="button" class="submit" value="Submit" />
       </form>
     </div>
     <script src="js/main.js"></script>
