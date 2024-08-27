@@ -113,7 +113,6 @@ body {
         }
         .error {
           position: absolute;
-          left: 2%;
           bottom: -32%;
           color: #ff0000;
           font-size: 14px;
@@ -159,7 +158,6 @@ body {
       }
       .error {
         position: absolute;
-        left: 2%;
         bottom: -32%;
         color: #ff0000;
         font-size: 14px;
@@ -176,7 +174,6 @@ body {
       position: relative;
       .error {
         position: absolute;
-        left: 2%;
         bottom: -32%;
         color: #ff0000;
         font-size: 14px;
@@ -300,7 +297,6 @@ body {
       }
       .error {
         position: absolute;
-        left: 2%;
         bottom: -15%;
         color: #ff0000;
         font-size: 14px;
@@ -357,7 +353,6 @@ body {
       position: relative;
       .error {
         position: absolute;
-        left: 1%;
         bottom: -100%;
         color: #ff0000;
         font-size: 14px;
@@ -441,7 +436,7 @@ body {
     width: 95%;
     .policy {
       label {
-        padding-left: 10% !important;
+        padding-left: 8% !important;
       }
     }
   }
@@ -450,16 +445,17 @@ body {
 @media (max-width: 575px) {
   .message-success {
     width: 75%;
-    top: 2%;
+    top: 1%;
   }
 
   .contact-container {
-    width: 98%;
+    width: 100%;
     .name {
       flex-direction: column;
+      margin-bottom: 7%;
       .first {
         width: 100%;
-        margin-bottom: 5%;
+        margin-bottom: 7%;
       }
       .last {
         width: 100%;
@@ -473,21 +469,24 @@ body {
       .last {
         &.error {
           .error {
-            bottom: -32%;
+            bottom: -26%;
+            font-size: 12px;
           }
         }
       }
     }
     .email {
+      margin-bottom: 7%;
       input {
         width: 100%;
       }
     }
     .query-type {
       flex-direction: column;
+      margin-bottom: 7%;
       .general {
         width: 100%;
-        margin-bottom: 5%;
+        margin-bottom: 7%;
       }
       .support {
         width: 100%;
@@ -499,11 +498,44 @@ body {
           padding: 2%;
         }
       }
+      .error {
+        left: 0;
+        bottom: -15% !important;
+      }
     }
     .message {
+      margin-bottom: 7%;
       div {
         textarea {
           width: 100%;
+        }
+      }
+    }
+    .policy {
+      margin-bottom: 7%;
+      .error {
+        font-size: 12px !important;
+        bottom: -90% !important;
+      }
+    }
+  }
+}
+@media (max-width: 349px) {
+  .contact-container {
+    .name {
+      .first,
+      .last {
+        &.error {
+          .error {
+            bottom: -45%;
+          }
+        }
+      }
+    }
+    .policy {
+      &.error {
+        .error {
+          bottom: -45% !important;
         }
       }
     }
